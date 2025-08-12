@@ -21,8 +21,7 @@ async function getJSON(url){
 async function postJSON(url, payload){
   const r = await fetch(url, {
     method: 'POST',
--   headers: { 'Content-Type': 'application/json' },
-+   headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+    headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(payload)
   });
   if(!r.ok) throw new Error('HTTP '+r.status);
